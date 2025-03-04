@@ -20,8 +20,6 @@ function asureAuth(req, res, next) {
   } catch (error) {
     return res.status(403).send({ msg: "Token invalido" });
   }
-
-  next();
 }
 
 module.exports = {
