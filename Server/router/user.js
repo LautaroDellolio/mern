@@ -1,7 +1,7 @@
 const express = require("express");
 const multiparty = require("connect-multiparty");
 const UserControler = require("../controllers/user");
-const md_auth = require("../middewares/aunthenticated");
+const md_auth = require("../middleware/aunthenticated");
 
 const md_upload = multiparty({ uploadDir: "./upload/avatar" });
 const api = express.Router();

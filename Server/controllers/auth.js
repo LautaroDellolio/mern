@@ -51,7 +51,7 @@ async function login(req, res) {
       } else if (!check) {
         res.status(400).send({ msg: "Los datos ingresados son incorrectos" });
       } else if (!userStore.active) {
-        res.status(401).send({ msg: "El usuario aun esta activo" });
+        res.status(401).send({ msg: "El usuario aun esta Inactivo" });
       } else {
         res.status(200).send({
           access: jwt.createAccessToken(userStore),
