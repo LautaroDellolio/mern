@@ -54,7 +54,7 @@ async function deleteCourse(req, res) {
         await Course.findByIdAndDelete(id)
         res.status(200).send({msg: "Curso eliminado correctamente"})
 
-    } catch {
+    } catch (error) {
         console.error("Error al eliminar el Curso: ", error);
         res.status(400).send({ msg: "Error al eliminar el Curso" })
     }
