@@ -27,7 +27,7 @@ async function getPosts(req, res) {
             limit: parseInt(limit),
             sort: { created_at: "desc" }
         }
-        const listPost = await Post.find().paginate(options)
+        const listPost = await Post.find().paginate({}, options)
         res.status(200).send(listPost)
     } catch (error) {
         console.error("Error al obtener los posts: ", error);
