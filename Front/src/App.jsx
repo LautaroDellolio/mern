@@ -1,18 +1,14 @@
-import './App.css'
-import HolaMundo from './Components/HolaMundo'
-import Saludar from './Components/Saludar'
+import { BrowserRouter } from "react-router-dom"
+import { AdminRouter } from "./router/AdminRouter"
+import { WebRouter } from "./router/WebRouter"
+
 
 function App() {
-  
-
   return (
-    <>
-       <Saludar name="María"/>
-       
-       
-       <Saludar name="Pepe Milanesa"/>
-
-    </>
+    <BrowserRouter>
+      <WebRouter />
+      <AdminRouter />
+    </BrowserRouter>
   )
 }
 
